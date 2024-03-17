@@ -1,0 +1,35 @@
+$bgColors: (
+  primary: #6259ca,
+  secondary: #f1388b,
+  success: #19b159,
+  warning: #ff9b21,
+  danger: #fd6074,
+  info: #01b8ff,
+  purple: #6f42c1,
+  pink: #ff75ad,
+  teal: #0cc,
+);
+
+$bgColorsTransparent:
+  white 255 255 255 0.12,
+  dark 28 39 60 0.12,
+  primary 98 89 202 0.1,
+  secondary 240 112 187 0.15,
+  success 111 234 163 0.2,
+  info 1 184 255 0.12,
+  warning 243 202 86 0.15,
+  danger 255 71 61 0.12,
+  pink 255 101 165 0.12,
+  purple 111 66 193 0.12;
+
+$gray: (
+  100: #eaeafb,
+  200: #d0d0ec,
+  300: #babade,
+  400: #8f8fb7,
+  500: #717196,
+  600: #4f4f71,
+  700: #3c3c5d,
+  800: #262644,
+  900: #1b1b33
+);

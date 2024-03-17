@@ -1,0 +1,353 @@
+$positions: (
+  top: 't',
+  right: 'r',
+  bottom: 'b',
+  left: 'l',
+);
+
+$otherPositions: (
+  top: 't',
+  right: 'e',
+  bottom: 'b',
+  left: 's',
+);
+
+@mixin ht() {
+  @for $i from 0 through 10 {
+    .ht-#{$i} {
+      height: #{$i}px !important;
+    }
+  }
+
+  @for $i from 3 through 20 {
+    .ht-#{$i * 5} {
+      height: #{$i * 5}px !important;
+    }
+  }
+
+  @for $i from 3 through 20 {
+    .ht-#{$i * 50} {
+      height: #{$i * 50}px !important;
+    }
+  }
+
+  @for $i from 0 through 10 {
+    .ht-#{$i * 10}p {
+      height: percentage($i / 10) !important;
+    }
+  }
+}
+@mixin htSize($size) {
+  @for $i from 0 through 10 {
+    .ht-#{$size}-#{$i} {
+      height: #{$i}px !important;
+    }
+  }
+
+  @for $i from 3 through 20 {
+    .ht-#{$size}-#{$i * 5} {
+      height: #{$i * 5}px !important;
+    }
+  }
+
+  @for $i from 3 through 20 {
+    .ht-#{$size}-#{$i * 50} {
+      height: #{$i * 50}px !important;
+    }
+  }
+
+  @for $i from 0 through 10 {
+    .ht-#{$size}-#{$i * 10}p {
+      height: percentage($i / 10) !important;
+    }
+  }
+}
+
+@mixin wd() {
+  @for $i from 0 through 10 {
+    .wd-#{$i} {
+      width: #{$i}px !important;
+    }
+  }
+
+  @for $i from 3 through 20 {
+    .wd-#{$i * 5} {
+      width: #{$i * 5}px !important;
+    }
+  }
+
+  @for $i from 3 through 20 {
+    .wd-#{$i * 50} {
+      width: #{$i * 50}px !important;
+    }
+  }
+
+  @for $i from 0 through 10 {
+    .wd-#{$i * 10}p {
+      width: percentage($i / 10) !important;
+    }
+  }
+}
+@mixin wdSize($size) {
+  @for $i from 0 through 10 {
+    .wd-#{$size}-#{$i} {
+      width: #{$i}px !important;
+    }
+  }
+
+  @for $i from 3 through 20 {
+    .wd-#{$size}-#{$i * 5} {
+      width: #{$i * 5}px !important;
+    }
+  }
+
+  @for $i from 3 through 20 {
+    .wd-#{$size}-#{$i * 50} {
+      width: #{$i * 50}px !important;
+    }
+  }
+
+  @for $i from 0 through 10 {
+    .wd-#{$size}-#{$i * 10}p {
+      width: percentage($i / 10) !important;
+    }
+  }
+}
+
+@mixin mg() {
+  @each $position, $abbr in $positions {
+    @for $i from 0 through 10 {
+      .mg-#{$abbr}-#{$i} {
+        margin-#{$position}: #{$i}px !important;
+      }
+    }
+
+    @for $i from 3 through 20 {
+      .mg-#{$abbr}-#{$i * 5} {
+        margin-#{$position}: #{$i * 5}px !important;
+      }
+    }
+
+    @for $i from 3 through 20 {
+      .mg-#{$abbr}-#{$i * 50} {
+        margin-#{$position}: #{$i * 50}px !important;
+      }
+    }
+
+    .mg-#{$abbr}-auto {
+      margin-#{$position}: auto !important;
+    }
+  }
+
+  @each $position, $abbr in $otherPositions {
+    @for $i from 0 through 10 {
+      .m#{$abbr}-#{$i} {
+        margin-#{$position}: #{$i * 10}px !important;
+      }
+    }
+
+    .m#{$abbr}-auto {
+      margin-#{$position}: auto !important;
+    }
+  }
+
+  @for $i from 0 through 10 {
+    .mg-#{$i} {
+      margin: #{$i}px !important;
+    }
+  }
+
+  @for $i from 3 through 20 {
+    .mg-#{$i * 5} {
+      margin: #{$i * 5}px !important;
+    }
+  }
+
+  @for $i from 3 through 20 {
+    .mg-#{$i * 50} {
+      margin: #{$i * 50}px !important;
+    }
+  }
+
+  .mg-auto {
+    margin: auto !important;
+  }
+}
+@mixin mgSize($size) {
+  @each $position, $abbr in $positions {
+    @for $i from 0 through 10 {
+      .mg-#{$size}-#{$abbr}-#{$i} {
+        margin-#{$position}: #{$i}px !important;
+      }
+    }
+
+    @for $i from 3 through 20 {
+      .mg-#{$size}-#{$abbr}-#{$i * 5} {
+        margin-#{$position}: #{$i * 5}px !important;
+      }
+    }
+
+    @for $i from 3 through 20 {
+      .mg-#{$size}-#{$abbr}-#{$i * 50} {
+        margin-#{$position}: #{$i * 50}px !important;
+      }
+    }
+
+    .mg-#{$size}-#{$abbr}-auto {
+      margin-#{$position}: auto !important;
+    }
+  }
+
+  @each $position, $abbr in $otherPositions {
+    @for $i from 0 through 10 {
+      .m#{$abbr}-#{$size}-#{$i} {
+        margin-#{$position}: #{$i * 10}px !important;
+      }
+    }
+
+    .m#{$abbr}-#{$size}-auto {
+      margin-#{$position}: auto !important;
+    }
+  }
+
+  @for $i from 0 through 10 {
+    .mg-#{$size}-#{$i} {
+      margin: #{$i}px !important;
+    }
+  }
+
+  @for $i from 3 through 20 {
+    .mg-#{$size}-#{$i * 5} {
+      margin: #{$i * 5}px !important;
+    }
+  }
+
+  @for $i from 3 through 20 {
+    .mg-#{$size}-#{$i * 50} {
+      margin: #{$i * 50}px !important;
+    }
+  }
+
+  .mg-#{$size}-auto {
+    margin: auto !important;
+  }
+}
+
+@mixin pd() {
+  @each $position, $abbr in $positions {
+    @for $i from 0 through 10 {
+      .pd-#{$abbr}-#{$i} {
+        padding-#{$position}: #{$i}px !important;
+      }
+    }
+
+    @for $i from 3 through 24 {
+      .pd-#{$abbr}-#{$i * 5} {
+        padding-#{$position}: #{$i * 5}px !important;
+      }
+    }
+
+    @for $i from 13 through 20 {
+      .pd-#{$abbr}-#{$i * 10} {
+        padding-#{$position}: #{$i * 10}px !important;
+      }
+    }
+  }
+
+  @each $position, $abbr in $otherPositions {
+    @for $i from 0 through 10 {
+      .p#{$abbr}-#{$i} {
+        padding-#{$position}: #{$i * 10}px !important;
+      }
+    }
+  }
+
+  @for $i from 0 through 10 {
+    .pd-#{$i} {
+      padding: #{$i}px !important;
+    }
+  }
+
+  @for $i from 3 through 24 {
+    .pd-#{$i * 5} {
+      padding: #{$i * 5}px !important;
+    }
+  }
+
+  @for $i from 13 through 20 {
+    .pd-#{$i * 10} {
+      padding: #{$i * 10}px !important;
+    }
+  }
+}
+@mixin pdSize($size) {
+  @each $position, $abbr in $positions {
+    @for $i from 0 through 10 {
+      .pd-#{$size}-#{$abbr}-#{$i} {
+        padding-#{$position}: #{$i}px !important;
+      }
+    }
+
+    @for $i from 3 through 24 {
+      .pd-#{$size}-#{$abbr}-#{$i * 5} {
+        padding-#{$position}: #{$i * 5}px !important;
+      }
+    }
+
+    @for $i from 13 through 20 {
+      .pd-#{$size}-#{$abbr}-#{$i * 10} {
+        padding-#{$position}: #{$i * 10}px !important;
+      }
+    }
+  }
+
+  @each $position, $abbr in $otherPositions {
+    @for $i from 0 through 10 {
+      .p#{$abbr}-#{$size}-#{$i} {
+        padding-#{$position}: #{$i * 10}px !important;
+      }
+    }
+  }
+
+  @for $i from 0 through 10 {
+    .pd-#{$size}-#{$i} {
+      padding: #{$i}px !important;
+    }
+  }
+
+  @for $i from 3 through 24 {
+    .pd-#{$size}-#{$i * 5} {
+      padding: #{$i * 5}px !important;
+    }
+  }
+
+  @for $i from 13 through 20 {
+    .pd-#{$size}-#{$i * 10} {
+      padding: #{$i * 10}px !important;
+    }
+  }
+}
+
+@mixin pos() {
+  @each $position, $abbr in $positions {
+    @for $i from 0 through 20 {
+      .#{$abbr}-#{$i * 5} {
+        #{$position}: #{$i * 5}px !important;
+      }
+    }
+
+    @for $i from 0 through 20 {
+      .#{$abbr}--#{$i * 5} {
+        #{$position}: -#{$i * 5}px !important;
+      }
+    }
+  }
+}
+
+@mixin opSize($size) {
+  @for $i from 0 through 10 {
+    .op-#{$size}-#{$i} {
+      opacity: #{$i / 10} !important;
+    }
+  }
+}
